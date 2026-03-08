@@ -1,13 +1,32 @@
+"use client";
 import Link from 'next/link'
-import React from 'react'
+import React, {useState , useEffect } from 'react'
 import { FaCode } from 'react-icons/fa'
 import { NavLinks } from '@/constant/constant'
 import { BiDownload } from 'react-icons/bi'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 
 const Nav = () => {
+    const [navBg, setNavBg] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY >=90) setNavBg(true);
+            if(window.scrollY < 90) setNavBg(false);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    
   return (
-    <div className='transition-all duration-200 h-[12vh] z-10000 fixed w-full'>
+    <div className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md ": "fixed"}
+     duration-200 h-[12vh] z-10000 fixed w-full`}
+    >
       <div className='flex items-center h-full justify-between w-[90%] mx-auto'>
         {/* LOGO */}
         <div className='flex items-center space-x-2'>
@@ -48,3 +67,7 @@ const Nav = () => {
 }
 
 export default Nav
+
+function useffect(arg0: () => () => void, arg1: never[]) {
+  throw new Error('Function not implemented.');
+}
