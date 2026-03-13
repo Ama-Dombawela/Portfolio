@@ -6,7 +6,11 @@ import { NavLinks } from '@/constant/constant'
 import { BiDownload } from 'react-icons/bi'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 
-const Nav = () => {
+type NavProps = {
+  openNav:() => void
+};
+
+const Nav = ({ openNav }: NavProps) => {
     const [navBg, setNavBg] = useState(false);
 
     useEffect(() => {
@@ -59,7 +63,7 @@ const Nav = () => {
                 <span> Download CV</span>
             </button>
             {/*Burger Menu*/}
-            <HiBars3BottomRight className='w-8 h-8 text-white lg:hidden cursor-pointer'/>
+            <HiBars3BottomRight onClick={openNav} className='w-8 h-8 text-white lg:hidden cursor-pointer'/>
         </div>
       </div>
     </div>
@@ -67,7 +71,3 @@ const Nav = () => {
 }
 
 export default Nav
-
-function useffect(arg0: () => () => void, arg1: never[]) {
-  throw new Error('Function not implemented.');
-}
