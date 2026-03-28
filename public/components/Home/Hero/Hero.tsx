@@ -3,10 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import TypeWriter from 'typewriter-effect'
 import { BsArrowRight } from 'react-icons/bs';
+import ParticlesHero from './Background';
 
 const Hero = () => {
     return (
         <div className="relative h-screen flex items-center justify-center text-white overflow-hidden flex-col">
+            <ParticlesHero/>
             <div className="relative z-10 flex flex-col items-center">
                 <Image
                     src="/images/assets/Me.jpeg"
