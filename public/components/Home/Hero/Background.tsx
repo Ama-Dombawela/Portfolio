@@ -56,7 +56,7 @@ export default function ParticlesHero() {
 
       particles: {
         color: {
-          value: ["#ffffff", "#93c5fd", "#3b82f6", "#bfdbfe", "#60a5fa"],
+          value: ["#ffffff", "#6ee7b7", "#10b981", "#a7f3d0", "#34d399"],
           animation: {
             enable: true,
             speed: 12,
@@ -66,14 +66,14 @@ export default function ParticlesHero() {
 
         links: {
           enable: true,
-          distance: 130,
-          opacity: 0.18,
+          distance: 150,
+          opacity: 0.1,
           width: 1,
           triangles: {
             enable: true,
             opacity: 0.03,
           },
-          color: { value: "#3b82f6" },
+          color: { value: "#10b981" },
         },
 
         move: {
@@ -81,7 +81,7 @@ export default function ParticlesHero() {
           enable: true,
           outModes: { default: OutMode.out },
           random: true,
-          speed: { min: 0.3, max: 1.2 },
+          speed: { min: 0.1, max: 0.6 },
           straight: false,
           attract: {
             enable: true,
@@ -110,14 +110,11 @@ export default function ParticlesHero() {
         },
 
         shape: {
-          type: ["circle", "circle", "circle", "star"],
-          options: {
-            star: { sides: 4 },
-          },
+          type: "circle",
         },
 
         size: {
-          value: { min: 1, max: 3.5 },
+          value: { min: 1, max: 2.5 },
           animation: {
             enable: true,
             speed: 2,
@@ -130,7 +127,7 @@ export default function ParticlesHero() {
         shadow: {
           enable: true,
           blur: 6,
-          color: { value: "#93c5fd" },
+          color: { value: "#6ee7b7" },
         },
 
         stroke: {
@@ -149,20 +146,20 @@ export default function ParticlesHero() {
     <>
       {/* === Blue & white gradient backdrop === */}
       <div
-        className="absolute inset-0 -z-10"
+        className="fixed inset-0 -z-10"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(59,130,246,0.22) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(16,185,129,0.22) 0%, transparent 60%),
             radial-gradient(ellipse 60% 50% at 80% 90%,  rgba(255,255,255,0.08) 0%, transparent 55%),
-            radial-gradient(ellipse 50% 40% at 60% 40%,  rgba(147,197,253,0.10) 0%, transparent 50%),
-            linear-gradient(160deg, #020d1f 0%, #041329 50%, #061628 100%)
+            radial-gradient(ellipse 50% 40% at 60% 40%,  rgba(110,231,183,0.10) 0%, transparent 50%),
+            linear-gradient(160deg, #011007 0%, #021a0d 50%, #032412 100%)
           `,
         }}
       />
 
       {/* === Soft grain overlay for texture === */}
       <div
-        className="absolute inset-0 -z-10 opacity-[0.035]"
+        className="fixed inset-0 -z-10 opacity-[0.035]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           backgroundRepeat: "repeat",
@@ -171,7 +168,7 @@ export default function ParticlesHero() {
       />
 
       {/* === Aurora shimmer bands === */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
         <div
           style={{
             position: "absolute",
@@ -180,7 +177,7 @@ export default function ParticlesHero() {
             width: "70%",
             height: "2px",
             background:
-              "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), rgba(59,130,246,0.4), transparent)",
+              "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), rgba(16,185,129,0.4), transparent)",
             filter: "blur(12px)",
             animation: "aurora1 12s ease-in-out infinite alternate",
           }}
@@ -193,7 +190,7 @@ export default function ParticlesHero() {
             width: "60%",
             height: "2px",
             background:
-              "linear-gradient(90deg, transparent, rgba(147,197,253,0.3), rgba(255,255,255,0.25), transparent)",
+              "linear-gradient(90deg, transparent, rgba(110,231,183,0.3), rgba(255,255,255,0.25), transparent)",
             filter: "blur(10px)",
             animation: "aurora2 16s ease-in-out infinite alternate",
           }}
@@ -206,7 +203,7 @@ export default function ParticlesHero() {
             width: "50%",
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent, rgba(96,165,250,0.25), transparent)",
+              "linear-gradient(90deg, transparent, rgba(52,211,153,0.25), transparent)",
             filter: "blur(8px)",
             animation: "aurora3 20s ease-in-out infinite alternate",
           }}
@@ -218,7 +215,7 @@ export default function ParticlesHero() {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className="absolute inset-0"
+        className="fixed inset-0 -z-10"
       />
 
       {/* === Animation keyframes === */}

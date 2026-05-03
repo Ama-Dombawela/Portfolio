@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/public/components/Home/Navbar/ResponsiveNav";
+import ParticlesHero from "@/public/components/Home/Hero/Background";
 
-const font = Inter({
-  weight:["400", "500", "600", "700", "800", "900"],
+const font = Outfit({
+  weight:["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -21,9 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className}antialised bg-[#0d0d1f]`}>
+        className={`${font.className} antialiased bg-[#051208]`}>
+          <ParticlesHero/>
           <ResponsiveNav/>
-        {children}
+          <div className="relative z-10">
+            {children}
+          </div>
       </body>
     </html>
   );

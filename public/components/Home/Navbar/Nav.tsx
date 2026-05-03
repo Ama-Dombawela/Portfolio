@@ -28,7 +28,7 @@ const Nav = ({ openNav }: NavProps) => {
 
     
   return (
-    <div className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md ": "fixed"}
+    <div className={`transition-all ${navBg ? "bg-[#071a0fd9] shadow-md ": "fixed"}
      duration-200 h-[12vh] z-10000 fixed w-full`}
     >
       <div className='flex items-center h-full justify-between w-[90%] mx-auto'>
@@ -47,7 +47,7 @@ const Nav = ({ openNav }: NavProps) => {
               <Link
                 key={link.id}
                 href={link.url}
-                className='text-base hover:text-cyan-300 text-white font-medium transition-all duration-200'
+                className='text-base hover:text-emerald-300 text-white font-medium transition-all duration-200'
               >
                 <p>{link.Label}</p>
               </Link>
@@ -57,7 +57,7 @@ const Nav = ({ openNav }: NavProps) => {
         {/*Buttons*/}
         <div className='flex item-center space-x-4'>
             {/*CV button*/}
-            <button className='px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-blue-600 hover:bg-blue-800 transition-all duration-200
+            <button className='px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-emerald-600 hover:bg-emerald-800 transition-all duration-200
             duration-300 text-white flex items-center space-x-2'>
                 <BiDownload className='w-5 h-5'/>
                 <span> Download CV</span>
