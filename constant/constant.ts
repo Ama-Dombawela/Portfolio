@@ -1,7 +1,10 @@
+import type { CertificateType } from '@/public/components/Home/Resume/CertificationCard';
+
+// Navigation Links
 export const NavLinks = [
   {
     id: 1,
-    url: "#",
+    url: "#home",
     Label: "Home",
   },
   {
@@ -36,6 +39,7 @@ export const NavLinks = [
   },
 ];
 
+//Services Section Data
 export const servicesData = [
   {
     id: 1,
@@ -57,30 +61,97 @@ export const servicesData = [
   }
 ];
 
+//Projects Section Data
 export const projectsData = [
   {
     id: 1,
-    title: "",
-    description: "",
-    tech: [""],
-    image: "" 
+    title: "CrackCode – Gamified Coding Learning Platform",
+    description: "A full-stack gamified coding platform that transforms programming practice into an interactive detective-style experience. Users solve coding challenges, earn XP, unlock badges, and track progress through a personalized dashboard. Contributed to frontend development and API integration, focusing on responsive UI and user experience.",
+    tech: ["MERN Stack",
+      "Tailwind CSS",
+      "JWT Authentication",
+      "Redis",
+      "Judge0 API",
+      "Docker"],
+    image: "/images/assets/CrackCode.png",
+    githubUrl: "https://github.com/CrackCode-dev/CrackCode-Main"
   },
   {
     id: 2,
-    title: "",
-    description: "",
-    tech: [""],
-    image: "" 
+    title: "BetterMe",
+    description: "A health and wellness website promoting good health and well-being through content on mental health, physical health, nutrition, and lifestyle habits ",
+    tech: ["HTML5", "CSS3", "JavaScript", "SVG"],
+    image: "/images/assets/BetterMe.jpg",
+    githubUrl: "https://github.com/Ama-Dombawela/BetterMe"
   },
   {
     id: 3,
-    title: "",
-    description: "",
-    tech: [""],
-    image: "" 
+    title: "GearRent Pro",
+    description: "A multi-branch equipment rental system designed to manage reservations, rentals, returns, pricing, and customer memberships. It includes role-based access control and reporting features to streamline and automate rental operations across different branches.",
+    tech: ["Java",
+      "Java Swing",
+      "Layered Architecture",
+      "MySQL"],
+    image: "/images/assets/GearRentPro.png",
+    githubUrl: "https://github.com/Ama-Dombawela/GearRent-Pro"
+  },
+
+  {
+    id: 4,
+    title: "Smart Campus API",
+    description: "A RESTful backend system for managing university campus infrastructure, including Rooms, Sensors, and Sensor Readings. It supports hierarchical resource design, in-memory data management, and HATEOAS-based API navigation with structured exception handling and business rule enforcement.",
+    tech: [
+      "Java",
+      "JAX-RS (Jersey)",
+      "Apache Tomcat",
+      "RESTful API"
+    ],
+    image: "/images/assets/SmartCampusAPI.png",
+    githubUrl: "https://github.com/Ama-Dombawela/Smart-Campus-API"
+  },
+
+  {
+    id: 5,
+    title: "Traffic Data Analyzer & Visualizer",
+    description: "A Python application that analyzes traffic CSV datasets to generate key vehicle statistics and visualize hourly traffic flow using histograms with Tkinter. It processes multiple junction datasets, validates user input, and produces summarized traffic reports with saved results.",
+    tech: [
+      "Python",
+      "Tkinter",
+      "CSV",
+      "File Handling"
+    ],
+    image: "/images/assets/TrafficDataAnalyser.png",
+    githubUrl: "https://github.com/Ama-Dombawela/traffic-flow-analyzer-visualizer"
+  },
+  {
+    id: 6,
+    title: "Online Food Ordering System",
+    description: "An online food ordering system with full CRUD operations for managing users, food items, carts, and orders.",
+    tech: [
+      "Spring Boot",
+      "MySQL",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    image: "/images/assets/FoodOrderingSys.jpg",
+    githubUrl: "https://github.com/Ama-Dombawela/Online-Food-Ordering-System"
+  },
+  {
+    id: 7,
+    title: "Personal Portfolio Website",
+    description: "A responsive personal portfolio website  showcasing my skills, projects, and solutions in the tech field",
+    tech: [
+      "next.js",
+      "Tailwind CSS",
+      "TypeScript",
+    ],
+    image: "/images/assets/Portfolio.jpg",
+    githubUrl: "https://github.com/Ama-Dombawela/Portfolio"
   }
+
 ];
 
+//Skills Section Data
 export const skillsData = [
 
   {
@@ -129,6 +200,7 @@ export const skillsData = [
   }
 ];
 
+//Education Section Data
 export const educationData = [
   {
     id: 1,
@@ -172,6 +244,7 @@ export const educationData = [
   }
 ];
 
+//Resume Section Data
 export const experienceData = [
   {
     id: 1,
@@ -184,5 +257,60 @@ export const experienceData = [
       "Built the Career Map feature, enabling users to explore and select personalized software development career paths",
       "Designed and implemented the backend pipeline for coding question generation, management, and delivery system"
     ]
+  },
+];
+
+export const certificationData = [
+  {
+    id: 1,
+    title: 'LinkedIn Certifications',
+    issuer: 'LinkedIn Learning',
+    year: '',
+    type: 'certification' as CertificateType,
+  },
+  {
+    id: 2,
+    title: 'Sololearn Certifications',
+    issuer: 'Sololearn',
+    year: '',
+    type: 'certification' as CertificateType,
+    
+  },
+  {
+    id: 3,
+    title: 'Comprehensive Master Java Developer (CMJD)',
+    issuer: 'IJSE – Institute of Software Engineering',
+    year: 'May 2025 – May 2026',
+    type: 'certification' as CertificateType,
+  },
+  {
+    id: 4,
+    title: 'IEEE Student Member',
+    issuer: 'IEEE Student Branch – Informatics Institute of Technology',
+    year: 'Issued Aug 2025 · Expires Aug 2026',
+    type: 'membership' as CertificateType,
+    credentialId: '101177102',
+  },
+  {
+    id: 5,
+    title: 'IEEE CS Global Membership',
+    issuer: 'IEEE Computer Society',
+    year: 'Issued Aug 2025 · Expires Aug 2026',
+    type: 'membership' as CertificateType,
+    credentialId: '101177102',
+  },
+  {
+    id: 6,
+    title: 'Hult Prize',
+    issuer: 'Informatics Institute of Technology',
+    year: '2026',
+    type: 'participation' as CertificateType,
+  },
+  {
+    id: 7,
+    title: 'DevQuest Contest',
+    issuer: 'SLIIT CODEFEST',
+    year: '2025',
+    type: 'participation' as CertificateType,
   },
 ];
