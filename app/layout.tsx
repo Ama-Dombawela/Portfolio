@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "@/public/components/Home/Navbar/ResponsiveNav";
-import ParticlesHero from "@/public/components/Home/Hero/Background";
+import BackToTop from "@/public/components/Home/BackToTop/BackToTop";
 
 const font = Outfit({
   weight:["300", "400", "500", "600", "700", "800", "900"],
@@ -23,8 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${font.className} antialiased bg-[#051208]`}>
-          <ParticlesHero/>
           <ResponsiveNav/>
+          <BackToTop />
           <div className="relative z-10">
             {children}
           </div>

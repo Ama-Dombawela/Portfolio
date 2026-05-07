@@ -11,7 +11,7 @@ type SkillProps = {
 
 const SkillCard = ({ skill }: SkillProps) => {
   const circleStyle: React.CSSProperties = {
-    background: `conic-gradient(#10b981 ${skill.percent * 3.6}deg, rgba(255,255,255,0.06) 0deg)`,
+    background: `conic-gradient(#6ee7b7 ${skill.percent * 3.6}deg, rgba(255,255,255,0.06) 0deg)`,
   };
 
   return (
@@ -44,10 +44,12 @@ const Skills = () => {
   );
 
   return (
-    <div id="skills" className="pt-16 pb-16 relative z-10 w-4/5 mx-auto">
-      <h1 className="text-center text-3xl md:text-5xl font-bold text-white mb-12">
+    <div id="skills" className="pt-16 pb-16 relative z-10 w-11/12 md:w-4/5 mx-auto">
+      <h1 className="text-center text-3xl md:text-5xl font-bold text-white mb-8">
         My <span className="text-emerald-400">Skills</span>
       </h1>
+      <h2 className="text-center text-gray-300 font-semibold tracking-widest uppercase text-sm mb-8 max-w-5xl mx-auto">My core skills in software engineering and development</h2>
+    
       
       <div className="max-w-5xl mx-auto flex flex-col gap-12">
         {programmingLanguages && (

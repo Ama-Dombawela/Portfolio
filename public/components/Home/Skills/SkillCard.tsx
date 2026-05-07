@@ -10,12 +10,12 @@ type SkillProps = {
 
 const SkillCard = ({ skill }: SkillProps) => {
   const circleStyle: React.CSSProperties = {
-    background: `conic-gradient(#10b981 ${skill.percent * 3.6}deg, rgba(255,255,255,0.06) 0deg)`,
+    background: `conic-gradient(#6ee7b7 ${skill.percent * 3.6}deg, rgba(255,255,255,0.06) 0deg)`,
   };
 
   return (
     <div className="mb-4 w-full md:w-72">
-      <div className="bg-[#050b14]/60 backdrop-blur-md border border-white/5 p-4 rounded-2xl flex items-center gap-4 hover:-translate-y-1 transform transition-transform duration-300">
+      <div className="bg-black/50 backdrop-blur-md border border-white/5 p-4 rounded-2xl flex items-center gap-4 hover:-translate-y-1 transform transition-transform duration-300">
         <div className="w-12 h-12 rounded-full bg-linear-to-br from-emerald-400 via-emerald-500 to-emerald-700 flex items-center justify-center text-[#08111f] font-bold text-lg shadow-[0_0_18px_rgba(16,185,129,0.35)]">
           {skill.name.charAt(0).toUpperCase()}
         </div>
