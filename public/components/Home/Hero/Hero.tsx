@@ -14,7 +14,7 @@ const Hero = () => {
                 {/* Photo on left side */}
                 <div className="w-full sm:w-9/12 md:w-6/12 lg:w-[35%] max-w-lg mx-auto md:mx-0">
                     <Image
-                        src="/images/assets/ME.jpeg"
+                        src="/images/assets/Me.jpeg"
                         alt="Hero Image"
                         width={500}
                         height={700}
