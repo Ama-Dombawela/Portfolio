@@ -14,9 +14,9 @@ const EducationCard = ({ edu }: EducationProps) => {
   const isArray = Array.isArray(edu.description);
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/5 bg-[#050b14]/60 p-6 shadow-lg backdrop-blur-md transform transition-all duration-300 hover:-translate-y-1 hover:bg-[#081520] hover:border-emerald-500/15 hover:shadow-xl">
+    <div className="group relative overflow-hidden rounded-2xl border border-white/5 bg-black p-6 shadow-lg backdrop-blur-md cursor-pointer transform transition-all duration-700 hover:-translate-y-4 hover:bg-white/5 hover:shadow-[0_15px_40px_rgba(4,120,87,0.3)]">
       <div className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-emerald-400 via-emerald-500 to-transparent transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:via-emerald-400" />
-      <div className="absolute right-4 top-4 h-5 w-5 rounded-full border border-emerald-400/25 bg-emerald-400/8 opacity-90 transition-all duration-200 group-hover:scale-105 group-hover:bg-emerald-400/20" aria-hidden />
+      <div className="absolute right-4 top-4 h-5 w-5 rounded-full border border-emerald-400/25 bg-emerald-400/8 opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:bg-emerald-800/40" aria-hidden />
 
       <div className="relative flex flex-col gap-5 md:flex-row md:items-start md:justify-between md:gap-6">
         <div className="flex-1">
