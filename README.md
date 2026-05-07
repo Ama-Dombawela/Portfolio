@@ -62,6 +62,7 @@ This portfolio highlights my journey as a software developer, featuring:
 
 ## 📁 Project Structure
 
+```
 Portfolio/
 │
 ├── public/
@@ -94,8 +95,7 @@ Portfolio/
 ├── eslint.config.mjs
 ├── package.json
 └── README.md
-
----
+```
 
 ## ▶️ How to Run Locally
 
